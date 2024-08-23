@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <!--Row 1-->
+        <div class="col">
+            <h3>All Employees</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" *ngFor="let employee of employees">
+                    <p>{{ employee.firstName }} {{ employee.lastName }}</p>
+                    <p>{{ employee.email }}</p>
+                    <p>{{ employee.salary | currency }}</p>
+                    <button (click)="selectEmployee(employee.id)">Modify</button>
+                </li>
+            </ul>
+
+            <a href="/create-employee-page">Create Employee</a>
+        </div>
+    </div>
+</div>
